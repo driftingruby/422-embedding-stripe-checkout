@@ -218,6 +218,7 @@ GEM
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
+    stripe (9.3.0)
     thor (1.2.2)
     timeout (0.4.0)
     turbo-rails (1.4.0)
@@ -260,6 +261,7 @@ DEPENDENCIES
   selenium-webdriver
   sqlite3 (~> 1.4)
   stimulus-rails
+  stripe (~> 9.3)
   turbo-rails
   web-console
 

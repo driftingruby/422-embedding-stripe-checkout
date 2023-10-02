@@ -1,0 +1,31 @@
+<h1>Product</h1>
+
+<table class='table'>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+
+    <th colspan=4>Actions</th>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+
+        <td><%= link_to "Purchase", checkout_path(id: product) %></td>
+        <td><%= link_to "Show", product_path(product) %></td>
+        <td><%= link_to "Edit", edit_product_path(product) %></td>
+        <td>
+          <%= link_to "Delete", product_path(product),
+            "data-turbo-method": :delete,
+            "data-turbo-confirm": "Are you sure?" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New product", new_product_path %>

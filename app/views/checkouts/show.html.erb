@@ -1,0 +1,4 @@
+<div data-controller="stripe"
+  data-stripe-public-key-value="<%= Rails.application.credentials.dig(:stripe, :publishable_key) %>"
+  data-stripe-client-secret-value="<%= @session.client_secret %>">
+</div>

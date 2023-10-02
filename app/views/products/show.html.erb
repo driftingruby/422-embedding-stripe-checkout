@@ -1,0 +1,9 @@
+<%= render @product %>
+
+<div>
+  <%= link_to "Edit", edit_product_path(@product) %> |
+  <%= link_to "Destroy", product_path(@product),
+    "data-turbo-method": :delete,
+    "data-turbo-confirm": "Are you sure?" %> |
+  <%= link_to "Back to products", products_path %>
+</div>
